@@ -1,0 +1,24 @@
+@media screen and (min-device-width: 320px)
+    and (max-device-width: 480px) {
+        #navigation {
+            padding: 0px 0;
+        }
+        .site-logo img {
+            width: 55%;
+            height: auto;
+            margin-top: 20px;
+        }
+        #navigation ul li a {
+            text-align: center;
+
+        }
+        .about_me img{
+            margin: 27% auto;
+        }
+        .about_me_title {
+            margin-top: 25%;
+        }
+        .slicknav_menu .slicknav_no-text {
+            margin: -2px 15px;
+        }
+    }

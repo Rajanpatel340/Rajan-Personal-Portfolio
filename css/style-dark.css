@@ -1,0 +1,986 @@
+/*
+Author       : Rajan Kumar Patel
+Template Name: Personal Portfolio
+*/
+/*=============================================================
+    CSS INDEX
+    =============================
+    01. GENERAL STYLE (body, link color, section-title, preloader btn, overlay, section-padding etc)
+    02. START MENU STYLE
+    03. START HOME CSS STYLE
+    04. START ABOUT ME STYLE
+    05. START SERVICE STYLE
+    06. START SKILLS STYLE
+    07. START RESUME STYLE
+    
+    08. START CONTACT STYLE
+    09. START FOOTER DESIGN
+  =============================================================*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+body {
+color: #fafafa;
+background:#232a34;
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+overflow-x:hidden;
+}
+html,
+body { height: 100% }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0px;
+  margin: 0px;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  font-weight: 400;
+}
+a {
+font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+	list-style:none;
+}
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+b, strong {
+	font-weight: 600;
+}
+/*START PRELOADER DESIGN*/
+.preloader {
+	background:#232a34;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;	
+}
+.spinner {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	font-size: 10px;
+	text-indent: -12345px;
+	z-index: 10000;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+.no-padding { padding: 0 }
+/*END PRELOADER DESIGN*/
+.section-padding { padding: 80px 0 }
+/*START SECTION TITLE DESIGN*/
+.section-title{
+margin-bottom: 60px;
+width: 100%;
+position: relative;
+}
+.section-title h1 {
+	font-size: 40px;
+	font-weight: 600;
+	color: #fff;
+	text-transform: capitalize;
+	margin: 0;
+	text-align: center;
+}
+/*END SECTION TITLE DESIGN*/
+/*START SCROLL TO TOP*/
+.topcontrol {
+	background: none;
+	border-radius: 30px;
+	bottom: 5px;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+	        box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	height: 45px;
+	line-height: 45px;
+	opacity: 1;
+	position: fixed;
+	right: 5px;
+	text-align: center;
+	-webkit-transition: all 0.2s ease 0s;
+	-o-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
+	width: 45px;
+	border: 1px solid rgba(255,255,255,0.2);
+}
+.topcontrol:hover {
+    background: #74b9fff7;
+    color: #fff;
+}
+/*END SCROLL TO TOP*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.END GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02. START MENU STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.site-logo img{
+	width: 100%;
+	height: auto;
+}
+.bg-faded {
+	background-color:transparent;
+	-webkit-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+@media only screen and (max-width:480px) { 
+.bg-faded {background:#74b9fff7;}
+}
+.navbar-fixed {
+    z-index: 999;
+    position: fixed;
+    opacity: .98;
+    width: 100%;
+	padding:10px 0;
+    top: 0;
+    -webkit-animation: fadeInDown 800ms;
+    animation: fadeInDown 800ms;
+    -webkit-backface-visibility: hidden;
+    border-radius: 0px;
+    background: #74b9fff7;
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+	        box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+}
+#navigation{
+	padding: 20px 0;
+}
+#navigation.navbar-fixed {
+	padding: 15px 0;
+}
+.header_right {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-preferred-size: auto;
+	    flex-basis: auto;
+}
+#main-menu{
+	margin-top: 12px;
+}
+#main-menu ul{
+	list-style-type: none;
+}
+#main-menu ul li{
+	display: inline-block;
+	padding:0px 12px;
+	position: relative;
+}
+#main-menu ul li a {
+	color: #fff;
+	font-size: 18px;
+	text-transform: capitalize;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	font-weight: 600;
+}
+#navigation.navbar-fixed #main-menu ul li a{
+	color: #fff;
+}
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus,
+#main-menu ul li a:hover,
+#main-menu ul li a:focus{
+	color: #fff;
+}
+
+.slicknav_nav_icon{
+	color: #fff;
+	font-size: 24px;
+}
+#mobile_menu{display: none;}
+@media only screen and (max-width:767px) { 
+.navbar-default {
+padding: 10px!important;
+}
+.navbar-collapse{
+margin-top: 15px;
+}
+
+#navigation ul li a{ 
+position: inherit;
+color: #1d293e;
+
+}
+
+#navigation ul li ul ,
+#navigation ul li ul li ul{
+opacity: 1;
+position: inherit;
+top: 0;
+-webkit-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+z-index: 1;
+visibility: visible;
+background: #fff none repeat scroll 0 0;
+-webkit-box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.05);
+padding: 15px;
+left: 0;
+background: #f5f5f5;
+list-style: none;
+width: 100%;
+}
+#navigation ul li ul.sub-menu li{
+z-index: 1;
+}
+
+#navigation ul li:hover ul.sub-menu{
+top:0;
+opacity:1;
+z-index:999;
+visibility:visible;
+}
+#main-menu{
+display: none;
+}	
+#mobile_menu{
+display: block;
+width: 100%;
+}
+.slicknav_nav ul li a{
+color: #fff!important;
+}
+	
+}
+@media only screen and (max-width:767px) { 
+  .navbar-brand {
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width:480px) { 
+.slicknav_menu {
+	margin-top: -40px;
+}
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END  MENU STYLE
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 03. START HOME CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.welcome-area{
+padding-top:200px;
+height:750px;
+}
+@media only screen and (max-width:768px) { 
+.welcome-area{height:auto;}
+}
+.about_me img{
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+@media only screen and (max-width:480px) { 
+
+}
+.about_me_title {
+	margin-top:40px;
+}
+.about_me_title span {
+	background: #74b9fff7;
+	padding: 8px 30px;
+	display: inline-block;
+	margin-bottom: 15px;
+	border-radius: 30px 30px 0px 30px;
+	font-weight: 500;
+	font-size: 14px;
+}
+.about_me_title h1{font-weight: 700;font-size: 50px;}
+@media only screen and (max-width:480px) { 
+.about_me_title h1{font-size:40px;}
+}
+.about_me_title h4 {
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 0;
+	margin-top: 14px;
+	text-transform: capitalize;
+}
+.profile_info {
+margin-top:22px;
+}
+.profile_info span {
+	font-weight: 400;
+	display: block;
+	line-height: 30px;
+}
+.profile_info span i {
+	font-size: 14px;
+	margin-right: 10px;
+}
+/*START SOCIAL PROFILE CSS*/
+.social_profile {margin-top:20px;}
+.social_profile ul{
+list-style: outside none none;
+margin: 0;
+padding: 0;
+}
+.social_profile ul li{display: inline-block;}
+.social_profile ul li a {
+	text-align: center;
+	border: 0px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	margin-right: 10px;
+	font-size: 18px;
+	color: #eee;
+	border-radius: 30px;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	display: block;
+	border: 1px solid rgba(255,255,255,0.2);
+}
+.f_facebook:hover{background:#3B5998;border: 1px solid #3B5998;}
+.f_twitter:hover{background:#1A90D9;border: 1px solid #1A90D9;}
+.f_instagram:hover{background:#FF5252;border: 1px solid #FF5252;}
+.f_linkedin:hover{background:#0077B5;border: 1px solid #0077B5;}
+.f_skype:hover{background:#01A4E0;border: 1px solid #01A4E0;}
+@media only screen and (max-width:768px) { 
+.social_profile ul li a{margin-right:10px;margin-bottom:10px;}
+}
+@media only screen and (max-width:480px) { 
+.social_profile ul li a{
+	width:40px;
+	height:40px;
+	line-height:40px;
+}
+}
+.social_profile ul li a:hover{color:#fff;}
+/*END SOCIAL PROFILE CSS*/
+/*
+* ----------------------------------------------------------------------------------------
+* 03. END HOME CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 04. START ABOUT ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.about_content_img{}
+.about_content_img img{}
+.about_content{margin-top:100px;padding-right: 40px;}
+@media only screen and (max-width:768px) { 
+.about_content{margin-top:0px;padding-right:0px;}
+}
+.about_content h1 {
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.about_content p{}
+.about_content a {
+	background: #74b9fff7;
+	color: #fff;
+	padding: 10px 30px;
+	border-radius: 30px;
+	font-weight:600;
+	display: inline-block;
+	margin-top: 35px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.about_content a i{}
+/*
+* ----------------------------------------------------------------------------------------
+* 04. END ABOUT ME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05. START SERVICE STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.service-area{padding-bottom:30px;}
+.service_content {
+	background:#2d343e;
+	padding: 45px 20px;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	position: relative;
+	z-index: 2;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	margin: 50px 15px;
+	height: 250px;
+}
+@media only screen and (max-width:768px) { 
+.service_content{padding: 30px;}
+}
+@media only screen and (max-width:480px) { 
+.service_content{padding:40px;}
+}
+.service_content:hover{
+-webkit-box-shadow:0px 60px 60px rgba(0,0,0,0.1);
+        box-shadow:0px 60px 60px rgba(0,0,0,0.1);
+z-index:100;
+-webkit-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+        transform: translate(0, -10px);
+}
+.service_content span {
+	display: inline-block;
+	font-size: 28px;
+	margin-bottom: 25px;
+	text-align: center;
+	color: #fff;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	position: absolute;
+	top: -35px;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 100px;
+	border: 1px solid #74b9fff7;
+	background:#74b9fff7;
+}
+.service_content h4 {
+	text-transform: capitalize;
+	font-weight:700;
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+@media only screen and (max-width:768px) { 
+.service_content h4 {margin-top:20px;}
+}
+.service_content p{}
+/*START OWL BUTTON*/
+.owl-theme{-webkit-transition:0.4s;-o-transition:0.4s;transition:0.4s;}
+.owl-theme .owl-controls{
+    width: 100%;
+    height: 50px;
+	display: block!important;
+    opacity: 1;
+    position: absolute;
+    top: 38%;
+	-webkit-transition:0.4s;
+	-o-transition:0.4s;
+	transition:0.4s;
+}
+.owl-theme .owl-controls .owl-buttons div {
+	width: 40px;
+	height: 40px;
+	line-height: 30px;
+	opacity: 1;
+	border-radius: 30px;
+	background: none;
+	-webkit-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+	border: 1px solid rgba(255,255,255,0.4);
+}
+
+.owl-theme .owl-controls .owl-buttons div:hover{
+background:#74b9fff7;
+display:block;
+border: 1px solid #74b9fff7;
+}
+.owl-prev{
+    position: absolute;
+    left: -5%;
+}
+.owl-next{
+    position: absolute;
+    right: -5%;
+}
+.owl-prev:after,
+.owl-next:after{
+    content: "\f104";
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #fff;
+    opacity: 1;
+}
+.owl-next:after{ content: "\f105"; }
+@media only screen and (max-width: 767px){
+    .owl-theme .owl-controls{ margin-top: 20px; }
+}
+@media only screen and (max-width: 480px){
+    .owl-theme .owl-controls{display:none!important; }
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 05. END SERVICE STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06. START SKILLS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.skill-item {margin-bottom: 60px;}
+.skill-item h4 {
+	font-size: 20px;
+	padding-top: 20px;
+	font-weight: 600;
+}
+.skill-knob{color:#fff!important;}
+/*
+* ----------------------------------------------------------------------------------------
+* 06. END SKILLS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07. START RESUME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.timeline-area{padding-bottom: 50px;}
+.single_timeline {
+	padding: 40px;
+	margin-bottom: 30px;
+	background:#2d343e;
+}
+.single_timeline h4 {
+	font-weight: 700;
+	color:#fff;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+.single_timeline span {
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.active_company {
+	color: #fff;
+}
+.active_year{
+color:#74b9fff7;
+font-weight: 600;
+}
+.single_timeline p{color:#fff;}
+/*
+* ----------------------------------------------------------------------------------------
+* 07. END RESUME STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.START PORTFOLIO DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.our_portfolio{padding-bottom:50px;}
+.mix{
+	display: none;
+}
+.portfolio_filter ul {
+	list-style: none;
+	padding: 10px;
+	border-radius: 100px;
+	width: 60%;
+	margin: auto;
+	margin-bottom: 60px;
+}
+@media only screen and (max-width:768px) { 
+.portfolio_filter ul{width: 80%;}
+}
+.portfolio_filter ul li {
+	font-weight: 400;
+	text-transform: capitalize;
+	display: inline-block;
+	cursor: pointer;
+	padding: 7px 30px;
+	font-size: 14px;
+	color: #fff;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	margin: 0 3px 0px;
+	border-radius: 30px;
+	border: 2px solid #fff;
+}
+.portfolio_filter .active {
+	color: #fff;
+	background:#74b9fff7;
+	border: 2px solid #74b9fff7;
+}
+.single-project {
+    position: relative;
+	margin-bottom:30px;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+.single-project .sp-img {
+    position: relative;
+	cursor: pointer;
+}
+.sp-img img{border-radius:10px;}
+.single-project .sp-hover {
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+	background:rgba(44,164,109,0.6);
+    opacity: 0;
+    overflow: hidden;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+
+}
+.single-project:hover .sp-hover {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity:1;
+}
+.single-project .sp-hover h3 {
+	text-align: center;
+	font-weight: 600;
+	font-size: 30px;
+	margin-bottom:24px;
+}
+.single-project .sp-social {
+    position: relative;
+    top: 28%;
+}
+.single-project .sp-social ul {
+    position: relative;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+}
+.single-project .sp-social ul li {
+    position: relative;
+    display: inline-block;
+}
+.single-project .sp-social ul li a {
+	font-size: 14px;
+	display: block;
+	color: #1d293e;
+	background: #fff;
+	padding: 8px 26px;
+	font-weight: 700;
+	text-transform: capitalize;
+	border-radius: 5px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.single-project .sp-social ul li a:hover{
+background:#74b9fff7;
+color:#fff;
+}
+
+/*project modal*/
+.modal-title {
+    color: #1d293e;
+    margin: 0;
+    text-transform: uppercase;
+}
+.modal-content {
+    padding: 10px 30px;
+    border-radius: 0px;
+	margin-top: 100px;
+}
+.modal-body { margin-bottom: 15px }
+.modal-body img {
+	width: 100%;
+}
+.modal-body p {margin: 15px 0 0;
+text-align: left;color: #1d293e;}
+.project-list {margin-top: 30px;
+text-align: left; }
+.modal-title {
+	color: #2b2b2b;
+	margin: 0;
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 20px;
+	display: none;
+}
+.project-list li {
+    padding: 7px 0;
+    font-size: 14px;
+	color: #1d293e;
+}
+.project-list li a {
+	color: #1d293e;
+	margin-bottom: 0;
+	margin-right: 7px;
+	width: 125px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.project-list li a:hover { color: #74b9fff7; }
+/*End project modal*/
+/*
+* ----------------------------------------------------------------------------------------
+* 08.END PORTFOLIO DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+
+* ----------------------------------------------------------------------------------------
+
+* ----------------------------------------------------------------------------------------
+* 08. START CONTACT STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.contact input {
+	background: #2d343e;
+	border: 1px solid #2d343e;
+	border-radius: 30px;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	color: #fff;
+	font-size: 16px;
+	height: 50px;
+	padding: 10px;
+	width: 100%;
+	font-family: 'poppins', sans-serif;
+	padding-left: 30px;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.contact textarea {
+	background:#2d343e;
+	border: 1px solid #2d343e;
+	border-radius: 30px;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+	font-family: 'poppins', sans-serif;
+	padding-left: 30px;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.contact input:focus {
+background: #2d343e;
+border: 1px solid #2d343e;
+color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 0 none;
+}
+.contact textarea:focus {
+background: #2d343e;
+border: 1px solid #2d343e;
+color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 0 none;
+}
+.btn-contact-bg {
+	border-radius: 30px;
+	color: #fff;
+	outline: medium none !important;
+	padding: 15px 27px;
+	text-transform: capitalize;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	background: #74b9fff7;
+	font-weight: 600;
+	font-family: 'poppins', sans-serif;
+	cursor: pointer;
+}
+.btn-contact-bg:hover,
+.btn-contact-bg:focus {
+    background: #ffffff;
+    color: #232a34;
+}
+
+/*START ADDRESS*/
+.address{text-align: center;padding: 85px 60px;background:#2d343e;}
+@media only screen and (max-width:480px) { 
+.address{padding: 85px 30px;}
+}
+.address h2{
+font-weight: 600;
+color:#fff;
+}
+@media only screen and (max-width:480px) { 
+.address h2 {font-size:28px;}
+}
+.address h1 {
+	font-weight: 700;
+	margin: 20px 0;
+	color:#fff;
+}
+@media only screen and (max-width:480px) { 
+.address h1 {font-size:28px;}
+}
+.address h3{
+font-weight: 600;
+color:#fff;
+}
+@media only screen and (max-width:480px) { 
+.address h3 {font-size:28px;}
+}
+.map{}
+.map iframe{
+height:320px;
+border:none;
+width:100%;
+margin-bottom: -7px;
+}
+/*END ADDRESS*/
+/*
+* ----------------------------------------------------------------------------------------
+* 12.END CONTACT STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 13.START FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer_social {text-align:center;}
+.footer_logo {
+	margin-bottom: 20px;
+}
+.footer_social ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.footer_social ul li { display: inline-block }
+.footer_social ul li a {
+	display: block;
+	font-size: 16px;
+	border-bottom: 1px solid #eee;
+	margin: 0 10px;
+	text-transform: capitalize;
+	text-align: center;
+	-webkit-transition: all 0.2s ease 0s;
+	-o-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
+	color: #fff;
+	font-weight: 500;
+}
+.footer_social ul li a:hover { color: #74b9fff7; }
+/* whtasaap button */
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 5px;
+    right: 57px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 13.END FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
