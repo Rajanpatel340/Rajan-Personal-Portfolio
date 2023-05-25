@@ -21,4 +21,7 @@
         .slicknav_menu .slicknav_no-text {
             margin: -2px 15px;
         }
+        .service_content{
+            height: 27vh;
+        }
     }
